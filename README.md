@@ -14,7 +14,7 @@
   - Using the router to have (a filter) a route for all todo's, a route for those with a status of "done" and a route for "undone".
   - When I do a delete or update action, there should be a modal/notification with "Are you sure that you want to perform this action?" + confirm or cancel button. After deletion or update it should also give a notification (possibly a snackbar) that the change was successful (or not). For storage, you don't need to use a database, you can use Local Storage, Session Storage or simply a React State.
 
-## Optional:
+## <img src="https://user-images.githubusercontent.com/25181517/183568594-85e280a7-0d7e-4d1a-9028-c8c2209e073c.png" alt="nodejs" width="30" height="30"/>Optional:<img src="https://user-images.githubusercontent.com/25181517/183568594-85e280a7-0d7e-4d1a-9028-c8c2209e073c.png" alt="nodejs" width="30" height="30"/>
 
 - For those who are feeling masterful, they can store the input states on the back-end (Node JS)
 - You can use a draggable library to drag and drop entries, thus changing their order in the list (by ID or index).

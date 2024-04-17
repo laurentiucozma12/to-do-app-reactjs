@@ -28,15 +28,13 @@ export default function App() {
   };
 
   return (
-    <>
-      <div
-        className=" h-screen bg-[#ebd7fa] text-[#595014] 
+    <div
+      className=" h-screen bg-[#ebd7fa] text-[#595014] 
                   dark:bg-[#301c4d] dark:text-[#fafab5]"
-      >
-        <Navbar handleThemeSwitch={handleThemeSwitch} />
-        <Main />
-        <Footer />
-      </div>
-    </>
+    >
+      <Navbar handleThemeSwitch={handleThemeSwitch} />
+      <Main />
+      <Footer />
+    </div>
   );
 }

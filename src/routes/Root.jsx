@@ -5,8 +5,8 @@ import Footer from '../components/Footer';
 export default function Root() {
   return (
     <div
-      className=" h-screen bg-[#ebd7fa] text-[#595014] 
-                  dark:bg-[#301c4d] dark:text-[#fafab5]"
+      className=" h-screen bg-indigo-200 text-black 
+                  dark:bg-indigo-800 dark:text-white"
     >
       <Header />
       <Main />

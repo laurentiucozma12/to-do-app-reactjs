@@ -1,3 +1,6 @@
+import Navbar from './components/Navbar';
+import Main from './components/Main';
+import Footer from './components/Footer';
 import { useState, useEffect } from 'react';
 
 export default function App() {
@@ -25,13 +28,15 @@ export default function App() {
   };
 
   return (
-    <main className="flex h-screen items-center justify-center bg-white dark:bg-black">
-      <button
-        className="rounded-3xl bg-green-200 p-4"
-        onClick={handleThemeSwitch}
+    <>
+      <div
+        className=" h-screen bg-[#ebd7fa] text-[#595014] 
+                  dark:bg-[#301c4d] dark:text-[#fafab5]"
       >
-        Dark Mode
-      </button>
-    </main>
+        <Navbar handleThemeSwitch={handleThemeSwitch} />
+        <Main />
+        <Footer />
+      </div>
+    </>
   );
 }

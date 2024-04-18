@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 export default function Navbar() {
   const [theme, setTheme] = useState(null);
@@ -26,24 +27,36 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="flex justify-between bg-indigo-100 px-3 py-2 dark:bg-indigo-700">
-        <a href="/" className="inline-flex">
-          <img
-            className="mr-2"
-            src="/src/assets/react.webp"
-            alt="react icon"
-            width="30"
-          />
-          <p className="text-xl font-bold duration-700 hover:text-blue-700 hover:dark:text-[#60DAF9]">
-            To Do App React JS
-          </p>
-        </a>
-        <input
-          type="checkbox"
-          id="check"
-          // className="hidden"
-          onClick={handleThemeSwitch}
-        />
+      <nav className="flex h-12 justify-between bg-indigo-100 px-3 py-2 dark:bg-indigo-700">
+        <Link to={'/'} className="flex flex-col justify-center">
+          <div className="flex">
+            <img
+              className="mr-2"
+              src="/src/assets/react.webp"
+              alt="react icon"
+              width="30"
+            />
+            <p className="text-xl font-bold duration-700 hover:text-blue-700 hover:dark:text-[#60DAF9]">
+              To Do App React JS
+            </p>
+          </div>
+        </Link>
+        <div className="flex flex-col justify-center">
+          <div>
+            <Link to={'/'} className="mr-2">
+              Home
+            </Link>
+            <Link to={'/contact'} className="mr-2">
+              Contact
+            </Link>
+            <input
+              type="checkbox"
+              id="check"
+              // className="hidden"
+              onClick={handleThemeSwitch}
+            />
+          </div>
+        </div>
       </nav>
     </>
   );

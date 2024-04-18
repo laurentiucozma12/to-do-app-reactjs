@@ -1,10 +1,10 @@
-import Navbar from './Navbar';
-
 export default function Header() {
   return (
     <>
-      <header className="bg-indigo-100 px-3 py-2 dark:bg-indigo-700">
-        <Navbar />
+      <header>
+        <h1 className="text-center text-2xl font-bold">
+          Welcome to my To Do App React JS
+        </h1>
       </header>
     </>
   );

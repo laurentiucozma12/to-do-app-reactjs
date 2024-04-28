@@ -31,17 +31,16 @@ export default function Navbar() {
         <Link to={'/'} className="flex flex-col justify-center">
           <div className="flex">
             <img
-              className="mr-2"
+              className="mr-2 h-5 w-5 xl:h-7 xl:w-7"
               src="/src/assets/react.webp"
               alt="react icon"
-              width="30"
             />
-            <p className="text-xl font-bold duration-700 hover:text-blue-700 dark:text-white hover:dark:text-[#60DAF9]">
+            <p className="text-sm font-bold duration-700 hover:text-blue-700 dark:text-white hover:dark:text-[#60DAF9] xl:text-xl">
               To Do App React JS
             </p>
           </div>
         </Link>
-        <div className="flex flex-col justify-center">
+        <div className="flex flex-col justify-center text-sm xl:text-base">
           <div>
             <Link
               to={'/'}

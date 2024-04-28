@@ -6,7 +6,7 @@ export default function ToDoList({ newItem, setNewItem, handleSubmit }) {
 
   return (
     <form onSubmit={handleSubmit}>
-      <label className="text-3xl">Add Item</label>
+      <label className="text-xl font-bold xl:text-3xl">Add Item</label>
       <div className="flex">
         <Input value={newItem} onChange={setNewItem} inputRef={inputRef} />
 
@@ -16,7 +16,12 @@ export default function ToDoList({ newItem, setNewItem, handleSubmit }) {
           aria-label="Add Item"
           onClick={() => inputRef.current.focus()}
         >
-          <h3 className="text-3xl">+</h3>
+          <h3
+            className=" rounded-xl bg-green-300 px-3 pb-1 text-2xl font-bold duration-700 hover:bg-green-200 hover:text-green-700 
+                      dark:bg-indigo-800 dark:hover:bg-indigo-500"
+          >
+            +
+          </h3>
         </button>
       </div>
     </form>

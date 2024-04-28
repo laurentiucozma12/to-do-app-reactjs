@@ -7,7 +7,7 @@ export default function ToDoListContent({ list, handleCheck, handleDelete }) {
         <ul>
           {list.map((item) => {
             return (
-              <li className="flex text-2xl" key={item.id}>
+              <li className="mb-2 flex text-2xl" key={item.id}>
                 <Checkbox
                   key={item.id}
                   id={item.id}
@@ -21,7 +21,8 @@ export default function ToDoListContent({ list, handleCheck, handleDelete }) {
                   <h3>{item.item}</h3>
                 </label>
                 <button
-                  className="hover:text-red-600"
+                  className=" h-8 rounded-xl bg-red-300 px-3 text-lg font-bold duration-700  hover:bg-red-200 hover:text-red-700
+                            dark:bg-indigo-800 dark:hover:bg-indigo-100 dark:hover:text-red-500"
                   onClick={() => handleDelete(item.id)}
                 >
                   X

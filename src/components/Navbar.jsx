@@ -58,10 +58,13 @@ export default function Navbar() {
             {theme === 'dark' ? (
               <MoonOutlined
                 onClick={handleThemeSwitch}
-                className="text-lg text-white"
+                className="text-lg text-white duration-700 hover:dark:text-[#60DAF9]"
               />
             ) : (
-              <SunOutlined onClick={handleThemeSwitch} className="text-lg" />
+              <SunOutlined
+                onClick={handleThemeSwitch}
+                className="text-lg duration-700 hover:text-orange-600"
+              />
             )}
           </div>
         </div>

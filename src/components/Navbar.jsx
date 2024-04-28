@@ -36,7 +36,7 @@ export default function Navbar() {
               alt="react icon"
               width="30"
             />
-            <p className="text-xl font-bold duration-700 hover:text-blue-700 hover:dark:text-[#60DAF9]">
+            <p className="text-xl font-bold duration-700 hover:text-blue-700 dark:text-white hover:dark:text-[#60DAF9]">
               To Do App React JS
             </p>
           </div>
@@ -45,13 +45,13 @@ export default function Navbar() {
           <div>
             <Link
               to={'/'}
-              className="mr-2  duration-700 hover:text-blue-700 hover:dark:text-[#60DAF9]"
+              className="mr-2 duration-700 hover:text-blue-700 dark:text-white hover:dark:text-[#60DAF9]"
             >
               Home
             </Link>
             <Link
               to={'/contact'}
-              className="mr-2  duration-700 hover:text-blue-700 hover:dark:text-[#60DAF9]"
+              className="mr-2 duration-700  hover:text-blue-700 dark:text-white hover:dark:text-[#60DAF9]"
             >
               Contact
             </Link>

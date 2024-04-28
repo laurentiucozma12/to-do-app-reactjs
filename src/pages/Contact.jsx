@@ -15,7 +15,7 @@ export default function Contact() {
   };
 
   return (
-    <div id="contact" className="flex justify-center">
+    <div className="flex justify-center">
       <div>
         <a href={contact.platforms[0].link} target="_blank">
           <img
@@ -26,8 +26,7 @@ export default function Contact() {
           />
         </a>
       </div>
-
-      <div className="flex flex-col justify-center px-4">
+      <div className="flex flex-col px-4">
         <h1 className="mb-2 inline-flex text-2xl font-bold">
           Hello, my name is {contact.first} {contact.last}
         </h1>
@@ -38,7 +37,7 @@ export default function Contact() {
           <p className="mb-2 text-xl" key={platform.name}>
             <a
               className=" text-blue-900 duration-700 hover:text-blue-700
-                      dark:text-blue-300 hover:dark:text-blue-200"
+                      dark:text-blue-400 hover:dark:text-blue-300"
               target="_blank"
               href={platform.link}
             >

@@ -43,10 +43,16 @@ export default function Navbar() {
         </Link>
         <div className="flex flex-col justify-center">
           <div>
-            <Link to={'/'} className="mr-2">
+            <Link
+              to={'/'}
+              className="mr-2  duration-700 hover:text-blue-700 hover:dark:text-[#60DAF9]"
+            >
               Home
             </Link>
-            <Link to={'/contact'} className="mr-2">
+            <Link
+              to={'/contact'}
+              className="mr-2  duration-700 hover:text-blue-700 hover:dark:text-[#60DAF9]"
+            >
               Contact
             </Link>
             <input

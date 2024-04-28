@@ -20,3 +20,17 @@
 - You can use a draggable library to drag and drop entries, thus changing their order in the list (by ID or index).
   TodoList is just an example. Other colleagues have made applications for real estate, ads, car rentals etc. Here you have a free hand to do what you like.
   - Note: You can use any packages and any resources you want, the condition is that you understand what you have done and can show the functionality of the code.
+
+# To Do List App
+
+## How to Start the project
+
+```
+npm run dev
+```
+
+## How to start the DB
+
+```
+npx json-server -p 3500 -w data/db.json
+```

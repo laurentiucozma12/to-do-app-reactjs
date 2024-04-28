@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { MoonOutlined, SunOutlined } from '@ant-design/icons';
 
 export default function Navbar() {
   const [theme, setTheme] = useState(null);
@@ -54,12 +55,14 @@ export default function Navbar() {
             >
               Contact
             </Link>
-            <input
-              type="checkbox"
-              id="check"
-              // className="hidden"
-              onClick={handleThemeSwitch}
-            />
+            {theme === 'dark' ? (
+              <MoonOutlined
+                onClick={handleThemeSwitch}
+                className="text-lg text-white"
+              />
+            ) : (
+              <SunOutlined onClick={handleThemeSwitch} className="text-lg" />
+            )}
           </div>
         </div>
       </nav>

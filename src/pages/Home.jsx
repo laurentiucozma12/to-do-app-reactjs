@@ -1,6 +1,5 @@
 import ToDoList from '../components/ToDoList';
 import ToDoListContent from '../components/ToDoListContent';
-// import request from '../components/Request';
 import { useState, useEffect } from 'react';
 
 export default function Home() {

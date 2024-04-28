@@ -6,9 +6,7 @@ export default function Home() {
   const API_url = 'http://localhost:3500/items';
 
   const [list, setList] = useState([]);
-
   const [newItem, setNewItem] = useState('');
-
   const [error, setError] = useState(null);
 
   useEffect(() => {
@@ -96,6 +94,37 @@ export default function Home() {
     if (result) setError(result);
   };
 
+  //  create a function to edit an item
+
+  const handleEdit = async (id, editedItem) => {
+    const itemIndex = list.findIndex((item) => item.id === id);
+    if (itemIndex === -1) {
+      console.error('Item not found');
+      return;
+    }
+    const updatedList = [...list];
+    updatedList[itemIndex] = {
+      ...updatedList[itemIndex],
+      item: editedItem,
+    };
+    setList(updatedList);
+    const updateOptions = {
+      method: 'PATCH',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ item: editedItem }),
+    };
+    try {
+      const reqUrl = `${API_url}/${id}`;
+      const response = await fetch(reqUrl, updateOptions);
+      if (!response.ok) throw Error('Error Message');
+    } catch (error) {
+      console.error(error);
+      setError(error.message);
+    }
+  };
+
   //  create a function to delete an item
 
   const handleDelete = async (id) => {
@@ -135,6 +164,7 @@ export default function Home() {
         <ToDoListContent
           list={list}
           handleCheck={handleCheck}
+          handleEdit={handleEdit}
           handleDelete={handleDelete}
         />
       </div>

@@ -6,6 +6,10 @@ export default function ToDoListContent({ list, handleCheck, handleDelete }) {
       {list.length ? (
         <ul>
           {list.map((item) => {
+            const taskStyle = item.checked
+              ? { textDecoration: 'line-through' }
+              : {};
+
             return (
               <li className="mb-2 flex text-2xl" key={item.id}>
                 <Checkbox
@@ -17,12 +21,12 @@ export default function ToDoListContent({ list, handleCheck, handleDelete }) {
                 <label
                   onDoubleClick={() => handleCheck(item.id)}
                   className="mx-2"
+                  style={taskStyle}
                 >
                   <h3>{item.item}</h3>
                 </label>
                 <button
-                  className=" h-8 rounded-xl bg-red-300 px-3 text-lg font-bold duration-700  hover:bg-red-200 hover:text-red-700
-                            dark:bg-indigo-800 dark:hover:bg-indigo-100 dark:hover:text-red-500"
+                  className="h-8 rounded-xl bg-red-300 px-3 text-lg font-bold duration-700 hover:bg-red-200 hover:text-red-700 dark:bg-indigo-800 dark:hover:bg-indigo-100 dark:hover:text-red-500"
                   onClick={() => handleDelete(item.id)}
                 >
                   X

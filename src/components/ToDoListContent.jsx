@@ -41,7 +41,7 @@ export default function ToDoListContent({
               : {};
 
             return (
-              <li className="mb-2 flex text-2xl" key={item.id}>
+              <li className="mb-3 flex text-2xl" key={item.id}>
                 <Checkbox
                   key={item.id}
                   id={item.id}
@@ -50,14 +50,14 @@ export default function ToDoListContent({
                 />
                 <label
                   onDoubleClick={() => handleCheck(item.id)}
-                  className="mx-2"
+                  className="mx-2 flex"
                   style={taskStyle}
                 >
                   {/* Show the input field only for the item being edited */}
                   {editItemId === item.id ? (
                     <input
                       type="text"
-                      className="h-8 rounded-xl px-2 text-lg font-bold duration-700 dark:bg-indigo-800 "
+                      className="w-full rounded-xl px-2 text-lg font-bold duration-700 dark:bg-indigo-800 "
                       value={editedItem}
                       onChange={handleChange}
                     />
@@ -65,34 +65,32 @@ export default function ToDoListContent({
                     <h3>{item.item}</h3>
                   )}
                 </label>
-                <div className="flex">
-                  {/* Show the "Edit" button only if the item is not being edited */}
-                  {editItemId !== item.id && (
+                {/* Show the "Edit" button only if the item is not being edited */}
+                {editItemId !== item.id && (
+                  <button
+                    className="mr-2 h-8 rounded-xl bg-yellow-300 px-3 text-lg font-bold duration-700 hover:bg-blue-200 hover:text-blue-700 dark:bg-indigo-800 dark:hover:bg-indigo-100 dark:hover:text-blue-500"
+                    onClick={() => handleEditClick(item)}
+                  >
+                    Edit
+                  </button>
+                )}
+                {/* Show the "Save" and "Cancel" buttons only if the item is being edited */}
+                {editItemId === item.id && (
+                  <>
                     <button
-                      className="mr-2 h-8 rounded-xl bg-yellow-300 px-3 text-lg font-bold duration-700 hover:bg-blue-200 hover:text-blue-700 dark:bg-indigo-800 dark:hover:bg-indigo-100 dark:hover:text-blue-500"
-                      onClick={() => handleEditClick(item)}
+                      className="mr-2 h-8 rounded-xl bg-green-300 px-3 text-lg font-bold duration-700 hover:bg-green-200 hover:text-green-700 dark:bg-indigo-800 dark:hover:bg-indigo-100 dark:hover:text-blue-500"
+                      onClick={handleSubmitEdit}
                     >
-                      Edit
+                      Save
                     </button>
-                  )}
-                  {/* Show the "Save" and "Cancel" buttons only if the item is being edited */}
-                  {editItemId === item.id && (
-                    <>
-                      <button
-                        className="mr-2 h-8 rounded-xl bg-green-300 px-3 text-lg font-bold duration-700 hover:bg-green-200 hover:text-green-700 dark:bg-indigo-800 dark:hover:bg-indigo-100 dark:hover:text-blue-500"
-                        onClick={handleSubmitEdit}
-                      >
-                        Save
-                      </button>
-                      <button
-                        className="mr-2 h-8 rounded-xl bg-blue-300 px-3 text-lg font-bold duration-700 hover:bg-blue-200 hover:text-blue-700 dark:bg-indigo-800 dark:hover:bg-indigo-100 dark:hover:text-blue-500"
-                        onClick={handleCancelEdit}
-                      >
-                        Cancel
-                      </button>
-                    </>
-                  )}
-                </div>
+                    <button
+                      className="mr-2 h-8 rounded-xl bg-blue-300 px-3 text-lg font-bold duration-700 hover:bg-blue-200 hover:text-blue-700 dark:bg-indigo-800 dark:hover:bg-indigo-100 dark:hover:text-blue-500"
+                      onClick={handleCancelEdit}
+                    >
+                      Cancel
+                    </button>
+                  </>
+                )}
                 <button
                   className="h-8 rounded-xl bg-red-300 px-3 text-lg font-bold duration-700 hover:bg-red-200 hover:text-red-700 dark:bg-indigo-800 dark:hover:bg-indigo-100 dark:hover:text-red-500"
                   onClick={() => handleDelete(item.id)}
@@ -104,7 +102,7 @@ export default function ToDoListContent({
           })}
         </ul>
       ) : (
-        <h3 className="mt-8"> Empty List </h3>
+        <h3 className="mb-3 text-xl font-bold"> Empty List </h3>
       )}
     </div>
   );

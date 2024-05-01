@@ -154,7 +154,7 @@ export default function Home() {
 
   return (
     <div className="flex justify-center">
-      <div className="my-4 w-80 rounded-lg bg-indigo-100 px-3 py-2 dark:bg-indigo-700 xl:w-[500px]">
+      <div className="my-4 w-80 rounded-xl bg-indigo-100 px-4 pt-3 dark:bg-indigo-700 xl:w-[500px]">
         <ToDoList
           newItem={newItem}
           setNewItem={setNewItem}

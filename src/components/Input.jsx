@@ -7,7 +7,7 @@ const Input = ({ inputRef, value, onChange }) => {
 
   return (
     <AntdInput
-      className="my-2 mr-2 w-60 text-black xl:w-[350px]"
+      className="mr-2 w-60 rounded-xl text-black xl:w-full"
       type="text"
       id="addItem"
       autoFocus

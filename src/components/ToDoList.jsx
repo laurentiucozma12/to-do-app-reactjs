@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { useRef } from 'react';
 import Input from './Input';
 
@@ -23,3 +24,9 @@ export default function ToDoList({ newItem, setNewItem, handleSubmit }) {
     </form>
   );
 }
+
+ToDoList.propTypes = {
+  newItem: PropTypes.string,
+  setNewItem: PropTypes.func,
+  handleSubmit: PropTypes.func,
+};

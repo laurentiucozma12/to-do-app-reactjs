@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
+import PropTypes from 'prop-types';
 import Checkbox from './Checkbox';
 
 export default function ToDoListContent({
@@ -107,3 +108,16 @@ export default function ToDoListContent({
     </div>
   );
 }
+
+ToDoListContent.propTypes = {
+  list: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      item: PropTypes.string.isRequired,
+      checked: PropTypes.bool.isRequired,
+    }),
+  ).isRequired,
+  handleCheck: PropTypes.func,
+  handleEdit: PropTypes.func,
+  handleDelete: PropTypes.func,
+};

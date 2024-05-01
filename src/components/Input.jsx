@@ -1,4 +1,5 @@
 import { Input as AntdInput } from 'antd';
+import PropTypes from 'prop-types';
 
 const Input = ({ inputRef, value, onChange }) => {
   const handleChange = (e) => {
@@ -21,3 +22,9 @@ const Input = ({ inputRef, value, onChange }) => {
 };
 
 export default Input;
+
+Input.propTypes = {
+  inputRef: PropTypes.object,
+  value: PropTypes.string,
+  onChange: PropTypes.func,
+};

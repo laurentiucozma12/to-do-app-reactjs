@@ -28,7 +28,7 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="flex h-12 justify-between bg-indigo-100 px-3 py-2 dark:bg-indigo-700">
+      <nav className="flex justify-between bg-indigo-100 px-3 py-1 dark:bg-indigo-700 xl:py-2">
         <Link to={'/'} className="flex flex-col justify-center">
           <div className="flex">
             <img

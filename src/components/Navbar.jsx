@@ -51,7 +51,7 @@ export default function Navbar() {
             </Link>
             <Link
               to={'/contact'}
-              className="mr-2 duration-700  hover:text-blue-700 dark:text-white hover:dark:text-[#60DAF9]"
+              className="mr-2 duration-700 hover:text-blue-700 dark:text-white hover:dark:text-[#60DAF9]"
             >
               Contact
             </Link>
